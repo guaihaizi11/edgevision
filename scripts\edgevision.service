@@ -1,0 +1,19 @@
+﻿[Unit]
+Description=EdgeVision Video Behavior Analysis System
+After=network.target
+
+[Service]
+Type=simple
+User=edgevision
+Group=edgevision
+ExecStart=/usr/local/bin/edgevision --config /etc/edgevision
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=edgevision
+LimitNOFILE=65536
+Environment=LD_LIBRARY_PATH=/usr/local/lib
+
+[Install]
+WantedBy=multi-user.target
