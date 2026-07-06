@@ -1,0 +1,38 @@
+﻿# EdgeVision System Configuration
+
+system:
+  max_concurrent_channels: 8
+  fps_sampling: 5
+  alert_cooldown_seconds: 30
+  snapshot_quality: 85
+  storage_path: ./data/alerts
+  db_path: ./data/edgevision.db
+  log_level: info
+  log_path: ./logs
+
+# MQTT Configuration
+mqtt:
+  broker: 127.0.0.1
+  port: 1883
+  username: ""
+  password: ""
+  client_id: edgevision
+  qos: 1
+  keep_alive: 60
+
+# HTTP Callback
+http_callback:
+  enabled: false
+  url: ""
+  timeout_ms: 5000
+  retry_count: 3
+
+# System Monitoring
+monitor:
+  interval_seconds: 1
+  cpu_warning: 80
+  cpu_critical: 95
+  mem_warning: 85
+  npu_temp_warning: 75
+  npu_temp_critical: 85
+  disk_warning: 80
