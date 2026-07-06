@@ -1,0 +1,72 @@
+﻿# EdgeVision Behavior Rules Configuration
+
+global:
+  fps_sampling: 5
+  max_concurrent_channels: 8
+  alert_cooldown_seconds: 30
+  snapshot_quality: 85
+  storage_path: ./data/alerts
+
+behavior_rules:
+  # Phone Usage Detection
+  - rule_id: behavior_phone_usage
+    name: Phone Usage Detection
+    description: Detects person holding a mobile phone for sustained duration
+    priority: 2
+    conditions:
+      - type: spatial_overlap
+        objects:
+          - person
+          - cell_phone
+        iou_threshold: 0.1
+        duration_frames: 15
+      - type: temporal_consistency
+        min_consecutive_frames: 10
+    action:
+      alert_level: warning
+      mqtt_topic: edgevision/alert/phone
+      snapshot: true
+      min_confidence: 0.45
+      cooldown_seconds: 30
+
+  # Hardhat Absence Detection
+  - rule_id: behavior_no_hardhat
+    name: Hardhat Absence
+    description: Detects person without hardhat
+    priority: 1
+    conditions:
+      - type: negative_detection
+        target_class: person
+        absent_classes:
+          - hardhat
+        roi_only: true
+        duration_seconds: 2.0
+    action:
+      alert_level: critical
+      mqtt_topic: edgevision/alert/no_hardhat
+      snapshot: true
+      min_confidence: 0.5
+      cooldown_seconds: 30
+
+  # Smoking Detection
+  - rule_id: behavior_smoking
+    name: Smoking Detection
+    description: Detects person smoking
+    priority: 1
+    conditions:
+      - type: spatial_overlap
+        objects:
+          - person
+          - cigarette
+        iou_threshold: 0.05
+        duration_frames: 10
+      - type: motion_pattern
+        region: face
+        min_movement_score: 0.6
+    action:
+      alert_level: critical
+      mqtt_topic: edgevision/alert/smoking
+      snapshot: true
+      video_clip: true
+      min_confidence: 0.45
+      cooldown_seconds: 60
