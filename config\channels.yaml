@@ -1,0 +1,21 @@
+﻿# EdgeVision Channel Configuration
+# Each channel corresponds to a camera
+
+channels:
+  - id: CAM-001
+    name: Construction Site Entrance
+    rtsp_url: rtsp://admin:password@192.168.1.100:554/stream1
+    fps: 5
+    enabled: true
+
+  - id: CAM-002
+    name: Workshop A Corridor
+    rtsp_url: rtsp://admin:password@192.168.1.101:554/stream1
+    fps: 5
+    enabled: true
+
+  - id: CAM-003
+    name: Warehouse Corridor
+    rtsp_url: rtsp://admin:password@192.168.1.102:554/stream1
+    fps: 5
+    enabled: false
