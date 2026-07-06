@@ -1,0 +1,1 @@
+Code of Conduct adapted from Contributor Covenant v2.1
