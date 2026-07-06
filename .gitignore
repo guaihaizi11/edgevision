@@ -1,0 +1,28 @@
+﻿# Build directories
+build*/
+*.o
+*.so
+*.a
+*.exe
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Data
+data/
+logs/
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.env
+
+# Config (local overrides)
+config/local*.yaml
+
+# RK3588 specific
+rknn_models/
