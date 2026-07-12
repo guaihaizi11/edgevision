@@ -8,12 +8,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- Security policy documentation (docs/SECURITY.md)
-- UTF-8 encoding support for config files (api/config_encoding.py)
+- Mining operations use case support
+- Docker support planned in roadmap
+
+## [1.3.0] - 2026-07-12
 
 ### Changed
-- Comprehensive README rewrite with use cases, ecosystem, and architecture
-- Improved documentation structure and navigation
+- Comprehensive README rewrite with expanded use cases, ecosystem compatibility, and architecture diagram
+- Extended CHANGELOG with full version history from v0.1.0
+- Updated SECURITY.md with supported versions matrix
+- Added bug report and feature request issue templates
+
+### Added
+- **Use Cases**: Construction sites, factories, warehouses, smart parks, schools, mining operations
+- **Ecosystem Table**: Full compatibility matrix for RK3588, RKNN, GStreamer, RGA, MQTT, RTSP/ONVIF
+- **Performance Targets**: Detailed metrics table (latency, FPS, memory, power, temperature)
+- **Development Roadmap**: Phase-by-phase status tracking with milestones
+- **GitHub Badges**: License, platform, language, release, commit activity, stars
+- **Issue Templates**: Standardized bug report and feature request forms
+
+### Documentation
+- README now includes complete API endpoint documentation
+- Architecture diagram updated with full pipeline visualization
+- Technology stack and ecosystem compatibility tables added
 
 ## [1.2.0] - 2026-07-09
 
@@ -29,7 +46,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Config file encoding issues with Chinese characters (Issue #2)
-- README organization and completeness
 
 ### Documentation
 - SECURITY.md: Vulnerability reporting and supported versions
