@@ -7,9 +7,10 @@
 [![Language](https://img.shields.io/badge/Language-C%2B%2B17-lightgrey)](https://isocpp.org/)
 [![Python](https://img.shields.io/badge/Python-3.10+-blue)](https://www.python.org/)
 [![Vue](https://img.shields.io/badge/Frontend-Vue.js-42b883)](https://vuejs.org/)
-[![GitHub release](https://img.shields.io/github/v/release/guaihaizi11/edgevision)](https://github.com/guaihaizi11/edgevision/releases)
+[![GitHub release](https://img.shields.io/github/v/release/guaihaizi11/edgevision?include_prereleases)](https://github.com/guaihaizi11/edgevision/releases)
 [![GitHub commits](https://img.shields.io/github/commit-activity/m/guaihaizi11/edgevision)](https://github.com/guaihaizi11/edgevision/commits)
 [![GitHub stars](https://img.shields.io/github/stars/guaihaizi11/edgevision?style=social)](https://github.com/guaihaizi11/edgevision)
+[![GitHub issues](https://img.shields.io/github/issues/guaihaizi11/edgevision)](https://github.com/guaihaizi11/edgevision/issues)
 
 ## Overview
 
@@ -44,6 +45,7 @@ EdgeVision is an **open-source edge-deployed video behavior analysis system** pu
 | Warehouses | Detect unauthorized mobile device usage, ensure hardhat compliance in loading zones |
 | Smart Parks | Real-time safety monitoring across multiple camera feeds with instant alerting |
 | School Campuses | Monitor safety violations in restricted areas and enforce regulations |
+| Mining Operations | Enforce PPE compliance in hazardous underground environments |
 
 ## Technology Stack
 
@@ -75,6 +77,7 @@ EdgeVision is an **open-source edge-deployed video behavior analysis system** pu
 | **RTSP Cameras** | Yes | Standard RTSP/ONVIF protocol support |
 | **ONVIF Cameras** | Yes | Auto-discovery compatible |
 | **MQTT Brokers** | Yes | Mosquitto, EMQX, HiveMQ compatible |
+| **Docker** | Planned | Containerized deployment support |
 
 ## Architecture
 
@@ -221,6 +224,7 @@ RTSP Cameras (1-16 channels)
 | RGA Acceleration | Planned | 2D GPU image preprocessing |
 | WebSocket Push | Planned | Real-time alert notifications |
 | Model Training | Planned | Scene-specific YOLO models with INT8 quantization |
+| Docker Support | Planned | Containerized deployment for dev and prod |
 
 ## License
 
